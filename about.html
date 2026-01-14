@@ -537,15 +537,16 @@
             ];
         
             return education.map(edu => `
-                <div class="content-card" data-aos="fade-up">
-                    <div class="card-info">
-                        <h3>${edu.school}</h3>
-                        <p>${edu.description}</p>
-                        <p class="period">${edu.year}</p>
-                    </div>
+            <div class="content-card" data-aos="fade-up"
+                 onclick="alert('Pendidikan: ${edu.school}')">
+                <div class="card-info">
+                    <h3>${edu.school}</h3>
+                    <p>${edu.description}</p>
+                    <p class="period">${edu.year}</p>
                 </div>
+            </div>
             `).join('');
-        }
+            }
 
 
             function generateCertificateCards() {
