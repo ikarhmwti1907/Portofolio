@@ -538,6 +538,34 @@
                 AOS.refresh();
             }
 
+            function generateCertificateCards() {
+                const certificate = [
+                    {
+                        name: "Online Course",
+                        company: "Dunia Coding",
+                        image: "img/e-sertifikat.png",
+                    },
+                    {
+                        name: "Trial Class",
+                        company: "Telkom University",
+                        image: "img/telkom.jpg",
+                    },
+                    {
+                        name: "Workshop",
+                        company: "Nextskill",
+                        image: "img/Certificate_for_Ika_Rahmawati.jpg",
+                    },
+                    
+                ];
+
+                return certificate.map(certificate => `
+                <div class="content-card" data-aos="fade-up">
+                    <div class="card-image">
+                        <img src="${certificate.image}" alt="${certificate.name}">
+                    </div>
+                </div>
+            `).join('');
+            }
             
             function showCertificate() {
                 const aboutContent = document.getElementById('aboutContent');
