@@ -9,7 +9,7 @@ function cancel() {
 
 // Animasi
 
-const texts = ['WEB DEVELOPER', 'DESIGNER'];
+const texts = ['WEB DEVELOPMENT', 'UI DESIGN'];
 
 let speed = 100;
 
@@ -40,3 +40,4 @@ function eraseText() {
 }
 
 window.onload = typeWriter;
+
