@@ -452,11 +452,6 @@
                             <h3>P</h3>
                             <p>Pengalaman</p>
                         </div>
-                        <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400"
-                            onclick="showEducation()">
-                            <h3>P</h3>
-                            <p>Pendidikan</p>
-                        </div>
                         <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600"
                             onclick="showCertificate()">
                             <h3>S</h3>
@@ -539,6 +534,20 @@
             AOS.refresh();
         }
 
+        function generateEducationCards() {
+        const education = [
+                {
+                    school: "SMK - PPLG",
+                    year: "2023 - 2026",
+                    description: "Pengembangan Perangkat Lunak dan Gim"
+                },
+                {
+                    school: "SMP",
+                    year: "2020 - 2023",
+                    description: "Sekolah Menengah Pertama"
+                }
+            ];
+    
             return education.map(edu => `
                 <div class="content-card" data-aos="fade-up">
                     <div class="card-info">
@@ -549,35 +558,6 @@
                 </div>
             `).join('');
         }
-
-            function generateCertificateCards() {
-                const certificate = [
-                    {
-                        name: "Online Course",
-                        company: "Dunia Coding",
-                        image: "img/e-sertifikat.png",
-                    },
-                    {
-                        name: "Trial Class",
-                        company: "Telkom University",
-                        image: "img/telkom.jpg",
-                    },
-                    {
-                        name: "Workshop",
-                        company: "Nextskill",
-                        image: "img/Certificate_for_Ika_Rahmawati.jpg",
-                    },
-                    
-                ];
-
-                return certificate.map(certificate => `
-                <div class="content-card" data-aos="fade-up">
-                    <div class="card-image">
-                        <img src="${certificate.image}" alt="${certificate.name}">
-                    </div>
-                </div>
-            `).join('');
-            }
             
             function showCertificate() {
                 const aboutContent = document.getElementById('aboutContent');
@@ -657,24 +637,9 @@
                         period: "2025",                    
                     },
                     {
-                        title: "Mengikuti workshop wordpress",
+                        title: "Mengikuti bootcamp wordpress",
                         company: "Nextskill",
                         period: "2025",
-                    },
-                    {
-                        title: "Mengikuti triall class",
-                        company: "Telkom University",
-                        period: "2025",
-                    },
-                    {
-                        title: "Mengikuti workshop fundamental linux",
-                        company: "Nextskill",
-                        period: "2025"
-                    },
-                    {
-                        title: "Mengikuti bootcamp IoT",
-                        company: "Antares",
-                        period: "2024"
                     }
                     
                 ];
@@ -704,11 +669,11 @@
                         image: "img/telkom.jpg",
                     },
                     {
-                        name: "Workshop",
+                        name: "Bootcamp",
                         company: "Nextskill",
                         image: "img/Certificate_for_Ika_Rahmawati.jpg",
-                    },
-                    
+                    }
+                  
                 ];
 
                 return certificate.map(certificate => `
@@ -749,10 +714,6 @@
                                 <h3>E</h3>
                                 <p>Experience</p>
                             </div>
-                            <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400" onclick="showEducation()">
-                                <h3>E</h3>
-                                <p>Education</p>
-                            </div>
                             <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600" onclick="showClients()">
                                 <h3>C</h3>
                                 <p>Certificate</p>
@@ -767,4 +728,5 @@
         </script>
 </body>
 
-</html>  
+</html>
+
