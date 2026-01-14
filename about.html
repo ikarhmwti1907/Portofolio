@@ -472,182 +472,299 @@
 
        
         <script>
-    // Inisialisasi library AOS
-    AOS.init({ offset: 0 });
 
-    function hamburg() {
-        const navbar = document.querySelector(".dropdown")
-        navbar.style.transform = "translateY(0px)"
-    }
+            // Inisialisasi library AOS
+            AOS.init({ offset: 0 });
 
-    function cancel() {
-        const navbar = document.querySelector(".dropdown")
-        navbar.style.transform = "translateY(-500px)"
-    }
-
-    function showProjects() {
-        const aboutContent = document.getElementById('aboutContent');
-        aboutContent.innerHTML = `
-            <a href="about.html" class="back-button" onclick="restoreInitialContent()">
-                <i class="fas fa-arrow-left"></i> Back
-            </a>
-            <div class="about-header" data-aos="fade-down">
-                <h1>Projek Saya</h1>
-            </div>
-            <div class="content-grid">
-                ${generateProjectCards()}
-            </div>
-        `;
-        AOS.refresh();
-    }
-
-    function showExperience() {
-        const aboutContent = document.getElementById('aboutContent');
-        aboutContent.innerHTML = `
-            <a href="about.html" class="back-button" onclick="restoreInitialContent()">
-                <i class="fas fa-arrow-left"></i> Back
-            </a>
-            <div class="about-header" data-aos="fade-down">
-                <h1>Pengalaman Saya</h1>
-            </div>
-            <div class="content-grid">
-                ${generateExperienceCards()}
-            </div>
-        `;
-        AOS.refresh();
-    }
-
-    console.log("showEducation terpanggil");
-    function showEducation() {
-        const aboutContent = document.getElementById('aboutContent');
-        aboutContent.innerHTML = `
-            <a href="about.html" class="back-button" onclick="restoreInitialContent()">
-                <i class="fas fa-arrow-left"></i> Back
-            </a>
-            <div class="about-header" data-aos="fade-down">
-                <h1>Pendidikan Saya</h1>
-            </div>
-            <div class="content-grid">
-                ${generateEducationCards()}
-            </div>
-        `;
-        AOS.refresh();
-    }
-
-    function generateEducationCards() {
-        const education = [
-            {
-                school: "SMK - PPLG",
-                year: "2023 - 2026",
-                description: "Pengembangan Perangkat Lunak dan Gim"
-            },
-            {
-                school: "SMP",
-                year: "2020 - 2023",
-                description: "Sekolah Menengah Pertama"
+            
+            function hamburg() {
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
             }
-        ];
 
-        return education.map(edu => `
-            <div class="content-card" data-aos="fade-up">
-                <div class="card-info">
-                    <h3>${edu.school}</h3>
-                    <p>${edu.description}</p>
-                    <p class="period">${edu.year}</p>
-                </div>
-            </div>
-        `).join('');
-    }
-
-    function showCertificate() {
-        const aboutContent = document.getElementById('aboutContent');
-        aboutContent.innerHTML = `
-            <a href="about.html" class="back-button" onclick="restoreInitialContent()">
-                <i class="fas fa-arrow-left"></i> Back
-            </a>
-            <div class="about-header" data-aos="fade-down">
-                <h1>Sertifikat</h1>
-            </div>
-            <div class="content-grid">
-                ${generateCertificateCards()}
-            </div>
-        `;
-        AOS.refresh();
-    }
-
-    function generateProjectCards() {
-        const projects = [
-            {
-                title: "Absensi IoT",
-                image: "img/IoT.jpg",
-                description: "Berpartisipasi dalam pengembangan absensi berbasis IoT",
-                technologies: ["Arduino"]
-            },
-            {
-                title: "Website absensi rfid",
-                image: "img/rfid.jpg",
-                description: "Bergabung dalam pengembangan website absensi sebagai frontend",
-                technologies: ["HTML", "CSS"]
+            
+            function cancel() {
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(-500px)"
             }
-        ];
 
-        return projects.map(project => `
-            <div class="content-card" data-aos="fade-up">
-                <div class="card-image">
-                    <img src="${project.image}" alt="${project.title}">
+           
+            function showProjects() {
+                const aboutContent = document.getElementById('aboutContent');
+                aboutContent.innerHTML = `
+                <a href="about.html" class="back-button" onclick="restoreInitialContent()">
+                    <i class="fas fa-arrow-left"></i> Back
+                </a>
+                <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
+                    <h1>Projek Saya</h1>
                 </div>
-                <div class="card-info">
-                    <h3>${project.title}</h3>
-                    <p>${project.description}</p>
+                <div class="content-grid">
+                    ${generateProjectCards()}
                 </div>
-            </div>
-        `).join('');
-    }
-
-    function generateExperienceCards() {
-        const experiences = [
-            { title: "Course Web Development", company: "Coding Studio", period: "2025" }
-        ];
-
-        return experiences.map(exp => `
-            <div class="content-card" data-aos="fade-up">
-                <div class="card-info">
-                    <h3>${exp.title}</h3>
-                    <h4>${exp.company}</h4>
-                    <p class="period">${exp.period}</p>
-                </div>
-            </div>
-        `).join('');
-    }
-
-    function generateCertificateCards() {
-        const certificate = [
-            {
-                name: "Online Course",
-                company: "Dunia Coding",
-                image: "img/e-sertifikat.png"
+            `;
+                AOS.refresh();
             }
-        ];
 
-        return certificate.map(c => `
-            <div class="content-card" data-aos="fade-up">
-                <div class="card-image">
-                    <img src="${c.image}" alt="${c.name}">
+            
+            function showExperience() {
+                const aboutContent = document.getElementById('aboutContent');
+                aboutContent.innerHTML = `
+                <a href="about.html" class="back-button" onclick="restoreInitialContent()">
+                    <i class="fas fa-arrow-left"></i> Back
+                </a>
+                <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
+                    <h1>Pengalaman Saya</h1>
                 </div>
-                <div class="card-info">
-                    <h3>${c.name}</h3>
-                    <h4>${c.company}</h4>
+                <div class="content-grid">
+                    ${generateExperienceCards()}
                 </div>
-            </div>
-        `).join('');
-    }
+            `;
+                AOS.refresh();
+            }
 
-    function restoreInitialContent() {
-        location.reload();
-    }
-</script>
+            console.log("showEducation terpanggil");
+            function showEducation() {
+            const aboutContent = document.getElementById('aboutContent');
+            aboutContent.innerHTML = `
+                <a href="about.html" class="back-button" onclick="restoreInitialContent()">
+                    <i class="fas fa-arrow-left"></i> Back
+                </a>
+                <div class="about-header" data-aos="fade-down">
+                    <h1>Pendidikan Saya</h1>
+                </div>
+                <div class="content-grid">
+                    ${generateEducationCards()}
+                </div>
+            `;
+            AOS.refresh();
+        }
 
+            return education.map(edu => `
+                <div class="content-card" data-aos="fade-up">
+                    <div class="card-info">
+                        <h3>${edu.school}</h3>
+                        <p>${edu.description}</p>
+                        <p class="period">${edu.year}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+            function generateCertificateCards() {
+                const certificate = [
+                    {
+                        name: "Online Course",
+                        company: "Dunia Coding",
+                        image: "img/e-sertifikat.png",
+                    },
+                    {
+                        name: "Trial Class",
+                        company: "Telkom University",
+                        image: "img/telkom.jpg",
+                    },
+                    {
+                        name: "Workshop",
+                        company: "Nextskill",
+                        image: "img/Certificate_for_Ika_Rahmawati.jpg",
+                    },
+                    
+                ];
+
+                return certificate.map(certificate => `
+                <div class="content-card" data-aos="fade-up">
+                    <div class="card-image">
+                        <img src="${certificate.image}" alt="${certificate.name}">
+                    </div>
+                </div>
+            `).join('');
+            }
+            
+            function showCertificate() {
+                const aboutContent = document.getElementById('aboutContent');
+                aboutContent.innerHTML = `
+                <a href="about.html" class="back-button" onclick="restoreInitialContent()">
+                    <i class="fas fa-arrow-left"></i> Back
+                </a>
+                <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
+                    <h1>Sertifikat</h1>
+                </div>
+                <div class="content-grid">
+                    ${generateCertificateCards()}
+                </div>
+            `;
+                AOS.refresh();
+            }
+            
+            function generateProjectCards() {
+                const projects = [
+                    {
+                        title: "Absensi IoT",
+                        image: "img/IoT.jpg",
+                        description: "Berpartisipasi dalam pengembangan absensi berbasis IoT",
+                        technologies: ["Arduino"]
+                    },
+                    {
+                        title: "Website absensi rfid",
+                        image: "img/rfid.jpg",
+                        description: "Bergabung dalam pengembangan website absensi sebagai frontend",
+                        technologies: ["HTML", "CSS"]
+                    },
+                    {
+                        title: "UI Design",
+                        image: "img/UI.png",
+                        description: "Membuat desain UI",
+                        technologies: ["figma"]
+                    },
+                    {
+                        title: "Website Nerflix",
+                        image: "img/image.png",
+                        description: "Membuat website untuk menonton film",
+                        technologies: ["HTML", "CSS", "JAVASCRIPT"]
+                    },
+                    {
+                        title: "Pomodoro Timer",
+                        image: "img/pomodoro.png",
+                        description: "Berpartisipasi dalam pembuatan website pomodoro timer",
+                        technologies: ["HTML", "CSS", "JAVASCRIPT"]
+                    }
+                    
+                ];
+
+                return projects.map(project => `
+                <div class="content-card" data-aos="fade-up">
+                    <div class="card-image">
+                        <img src="${project.image}" alt="${project.title}">
+                    </div>
+                    <div class="card-info">
+                        <h3>${project.title}</h3>
+                        <p>${project.description}</p>
+                        <div class="technologies">
+                            ${project.technologies.map(tech => `
+                                <span class="technology-tag">${tech}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            }
+
+            
+            function generateExperienceCards() {
+                const experiences = [
+                    {
+                        title: "Mengikuti course online Web Development",
+                        company: "Coding studio",
+                        period: "2025",                    
+                    },
+                    {
+                        title: "Mengikuti workshop wordpress",
+                        company: "Nextskill",
+                        period: "2025",
+                    },
+                    {
+                        title: "Mengikuti triall class",
+                        company: "Telkom University",
+                        period: "2025",
+                    },
+                    {
+                        title: "Mengikuti workshop fundamental linux",
+                        company: "Nextskill",
+                        period: "2025"
+                    },
+                    {
+                        title: "Mengikuti bootcamp IoT",
+                        company: "Antares",
+                        period: "2024"
+                    }
+                    
+                ];
+
+                return experiences.map(exp => `
+                <div class="content-card" data-aos="fade-up">
+                    <div class="card-info">
+                        <h3>${exp.title}</h3>
+                        <h4>${exp.company}</h4>
+                        <p class="period">${exp.period}</p>
+                    </div>
+                </div>
+            `).join('');
+            }
+
+           
+            function generateCertificateCards() {
+                const certificate = [
+                    {
+                        name: "Online Course",
+                        company: "Dunia Coding",
+                        image: "img/e-sertifikat.png",
+                    },
+                    {
+                        name: "Trial Class",
+                        company: "Telkom University",
+                        image: "img/telkom.jpg",
+                    },
+                    {
+                        name: "Workshop",
+                        company: "Nextskill",
+                        image: "img/Certificate_for_Ika_Rahmawati.jpg",
+                    },
+                    
+                ];
+
+                return certificate.map(certificate => `
+                <div class="content-card" data-aos="fade-up">
+                    <div class="card-image">
+                        <img src="${certificate.image}" alt="${certificate.name}">
+                    </div>
+                    <div class="card-info">
+                        <h3>${certificate.name}</h3>
+                        <h4>${certificate.company}</h4>
+                    </div>
+                </div>
+            `).join('');
+            }
+            
+            function restoreInitialContent() {
+                const aboutContent = document.getElementById('aboutContent');
+                aboutContent.innerHTML = `
+                <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
+                    <h1>Tentang Saya</h1>
+                </div>
+                <div class="about-grid">
+                    <div class="about-image" data-aos="fade-right" data-aos-duration="1500">
+                        <img src="img/scof.jpg" alt="About Image">
+                    </div>
+                    <div class="about-text" data-aos="fade-left" data-aos-duration="1500">
+                        <h2>Siapa saya?</h2>
+                        <p>Saya adalah siswi SMK dengan jurusan PPLG (Pengembangan Perangkat Lunak dan Gim). Dengan pengalaman di bidang pengembangan web, UI desain. Saya mendedikasikan diri saya pada kode dan kreativitas.</p>
+                    <p>Perjalanan saya di bidang teknologi dimulai dengan rasa keingin tahuan dan skill saya meningkat seiring berjalannya waktu
+                       dan menghasilkan beberapa karya digital yang sudah saya buat.</p>
+
+                        <div class="stats">
+                            <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="200" onclick="showProjects()">
+                                <h3>P</h3>
+                                <p>Projects Completed</p>
+                            </div>
+                            <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400" onclick="showExperience()">
+                                <h3>E</h3>
+                                <p>Experience</p>
+                            </div>
+                            <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400" onclick="showEducation()">
+                                <h3>E</h3>
+                                <p>Education</p>
+                            </div>
+                            <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600" onclick="showClients()">
+                                <h3>C</h3>
+                                <p>Certificate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+                AOS.refresh();
+            }
+
+        </script>
 </body>
 
-</html>
-
+</html>  
