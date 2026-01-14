@@ -523,20 +523,20 @@
             }
 
             function showEducation() {
-            const aboutContent = document.getElementById('aboutContent');
-            aboutContent.innerHTML = `
+                const aboutContent = document.getElementById('aboutContent');
+                aboutContent.innerHTML = `
                 <a href="about.html" class="back-button" onclick="restoreInitialContent()">
                     <i class="fas fa-arrow-left"></i> Back
                 </a>
                 <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
-                    <h1>Pendidikan</h1>
+                    <h1>Pendidikan Saya</h1>
                 </div>
                 <div class="content-grid">
                     ${generateEducationCards()}
                 </div>
             `;
-            AOS.refresh();
-        }
+                AOS.refresh();
+            }
 
             return education.map(edu => `
             <div class="content-card" data-aos="fade-up"
