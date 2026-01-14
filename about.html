@@ -522,20 +522,22 @@
                 AOS.refresh();
             }
 
-            function generateEducationCards() {
-            const education = [
-                {
-                    school: "SMK - PPLG",
-                    year: "2023 - 2026",
-                    description: "Pengembangan Perangkat Lunak dan Gim"
-                },
-                {
-                    school: "SMP",
-                    year: "2020 - 2023",
-                    description: "Sekolah Menengah Pertama"
-                }
-            ];
-        
+            function showEducation() {
+            const aboutContent = document.getElementById('aboutContent');
+            aboutContent.innerHTML = `
+                <a href="about.html" class="back-button" onclick="restoreInitialContent()">
+                    <i class="fas fa-arrow-left"></i> Back
+                </a>
+                <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
+                    <h1>Pendidikan</h1>
+                </div>
+                <div class="content-grid">
+                    ${generateEducationCards()}
+                </div>
+            `;
+            AOS.refresh();
+        }
+
             return education.map(edu => `
             <div class="content-card" data-aos="fade-up"
                  onclick="alert('Pendidikan: ${edu.school}')">
